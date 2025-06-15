@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenken Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+        .admin-logo {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid white;
+        }
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px;
+            background-color: #333;
+            position: relative;
+        }
+        .menu-logo {
+            position: absolute;
+            top: -25px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #4CAF50;
+            background-color: white;
+        }
+        .menu-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .menu-button:hover {
+            background-color: #45a049;
+        }
+        .content-section {
+            display: none;
+            padding: 20px;
+            background-color: white;
+            margin: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .active {
+            display: block;
+        }
+        .product {
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+        }
+        .product:last-child {
+            border-bottom: none;
+        }
+        .whatsapp-button {
+            background-color: #25D366;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .music-container {
+            margin: 15px auto;
+            text-align: center;
+            background-color: rgba(255,255,255,0.2);
+            padding: 10px;
+            border-radius: 8px;
+            max-width: 300px;
+        }
+        .music-title {
+            color: white;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Zenken Store</h1>
+        <img src="https://l.top4top.io/p_3452s5sbu1.jpg" alt="Admin Logo" class="admin-logo">
+        
+        <div class="music-container">
+            <div class="music-title">Now Playing: Foutwnty - Mangu ft....</div>
+            <iframe src="https://screenapp.io/app/#/shared/Olfq5rM0ET" width="280" height="80" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </header>
+
+    <div class="menu-container">
+        <img src="https://l.top4top.io/p_3452s5sbu1.jpg" alt="Menu Logo" class="menu-logo">
+        <button class="menu-button" onclick="showSection('all-produk')">ALL PRODUK</button>
+        <button class="menu-button" onclick="showSection('contact-admin')">CONTACT ADMIN</button>
+        <button class="menu-button" onclick="window.open('https://wa.me/6285177939657', '_blank')">LINK WHATSAPP ADMIN</button>
+        <button class="menu-button" onclick="window.open('https://instagram.com/ZenkenStore', '_blank')">LINK IG ADMIN</button>
+        <button class="menu-button" onclick="showSection('payment-admin')">PAYMENT ADMIN</button>
+    </div>
+
+    <div id="all-produk" class="content-section active">
+        <h2>ALL PRODUK</h2>
+        <div class="product">
+            <h3>NOKOS INDO</h3>
+            <p>Harga: 6.000</p>
+            <a href="https://wa.me/6285177939657?text=Saya%20tertarik%20dengan%20produk%20NOKOS%20INDO" class="whatsapp-button">Pesan via WhatsApp</a>
+        </div>
+        <div class="product">
+            <h3>NOKOS ALL NEGARA</h3>
+            <p>Harga: 6.000 sampai 20.000</p>
+            <a href="https://wa.me/6285177939657?text=Saya%20tertarik%20dengan%20produk%20NOKOS%20ALL%20NEGARA" class="whatsapp-button">Pesan via WhatsApp</a>
+        </div>
+        <div class="product">
+            <h3>RESELLER PANEL SPEK HARGA R32 C8</h3>
+            <p>Harga: 9.000</p>
+            <a href="https://wa.me/6285177939657?text=Saya%20tertarik%20dengan%20produk%20RESELLER%20PANEL%20SPEK%20HARGA%20R32%20C8" class="whatsapp-button">Pesan via WhatsApp</a>
+        </div>
+        <div class="product">
+            <h3>RESELLER PANEL SPEK R16 C4</h3>
+            <p>Harga: 9.000</p>
+            <a href="https://wa.me/6285177939657?text=Saya%20tertarik%20dengan%20produk%20RESELLER%20PANEL%20SPEK%20R16%20C4" class="whatsapp-button">Pesan via WhatsApp</a>
+        </div>
+        <div class="product">
+            <h3>ADMIN PANEL SPEK R16 C4</h3>
+            <p>Harga: 14.000</p>
+            <a href="https://wa.me/6285177939657?text=Saya%20tertarik%20dengan%20produk%20ADMIN%20PANEL%20SPEK%20R16%20C4" class="whatsapp-button">Pesan via WhatsApp</a>
+        </div>
+        <div class="product">
+            <h3>JASHARE DI SHARE KE 190+ CH</h3>
+            <p>Harga: 2.000 PER TEXT</p>
+            <a href="https://wa.me/6285177939657?text=Saya%20tertarik%20dengan%20produk%20JASHARE%20DI%20SHARE%20KE%20190+%20CH" class="whatsapp-button">Pesan via WhatsApp</a>
+        </div>
+        <div class="product">
+            <h3>APK QRIS NO KTP</h3>
+            <p>Harga: 3.000</p>
+            <a href="https://wa.me/6285177939657?text=Saya%20tertarik%20dengan%20produk%20APK%20QRIS%20NO%20KTP" class="whatsapp-button">Pesan via WhatsApp</a>
+        </div>
+    </div>
+
+    <div id="contact-admin" class="content-section">
+        <h2>CONTACT ADMIN</h2>
+        <img src="https://l.top4top.io/p_3452s5sbu1.jpg" alt="Admin Logo" style="width:80px; height:80px; border-radius:50%; display:block; margin:10px auto;">
+        <p>Nomor WhatsApp: 6285177939657</p>
+        <a href="https://wa.me/6285177939657" class="whatsapp-button">Hubungi via WhatsApp</a>
+    </div>
+
+    <div id="payment-admin" class="content-section">
+        <h2>PAYMENT ADMIN</h2>
+        <img src="https://l.top4top.io/p_3452s5sbu1.jpg" alt="Admin Logo" style="width:80px; height:80px; border-radius:50%; display:block; margin:10px auto;">
+        <p>DANA: 085165407756</p>
+        <p>GOPAY: 085165407756</p>
+        <p>QRIS: MINTA ADMIN</p>
+        <a href="https://wa.me/6285177939657?text=Saya%20ingin%20meminta%20QRIS%20untuk%20pembayaran" class="whatsapp-button">Minta QRIS via WhatsApp</a>
+    </div>
+
+    <footer>
+        <p>INI ADALAH STORE ZENKEN YANG DI BUAT PADA TAHUN 2025</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Sembunyikan semua section
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Tampilkan section yang dipilih
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
